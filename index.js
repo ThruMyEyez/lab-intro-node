@@ -6,7 +6,13 @@ class SortedList {
 
   add(item) {
     this.items.push(item);
-    this.items = this.items.sort();
+    this.items = this.items.sort((a, b) => a - b);
+    //for (let i = this.items.length - 1; i > 0 && this.items[i] < this.items[i - 1]; i--) {
+    //  const cache = this.items[i];
+    //  this.items[i] = this.items[i - 1];
+    //  this.items[i - 1] = cache;
+    //}
+    //return
     this.length = this.items.length;
   }
 
